@@ -1,0 +1,19 @@
+{{!-- Main Content --}}
+<main>
+  {{!-- <h1>Title</h1> --}}
+  <h4 id="title" style="font-weight: bold;" value="{{title}}">{{title}}</h4>
+
+  {{!-- <h1>Content</h1> --}}
+  <div>
+    <p required>{{content}}</p>
+  </div>
+  <form class="comment-form" data-id="{{id}}" >
+    <div> 
+     <textarea id="comment" required>Enter comment here</textarea> 
+    </div>
+    <button type="submit">Submit</button>
+    {{!-- <button id="postDelete" >Delete</button> --}}
+  </form>
+</main>
+<script src="/js/comment.js"></script>
+

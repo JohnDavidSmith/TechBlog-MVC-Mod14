@@ -1,0 +1,50 @@
+<main>
+  <div class="dashboard-header" style="background-color: #f1f1f1;">
+  <h1 style="display: inline-block; margin-right: 1rem;">Your Dashboard</h1>
+ <h5 style="display: inline-block; margin: 0; font-family: 'Arial', sans-serif; font-size: 15px; font-weight: bold; font-style: oblique; color: #333;">Welcome, {{user.name}}!</h5>
+  </div>
+
+  <h4 style="font-style: oblique">My Blog Posts</h4>
+
+  {{#if posts.length}}
+  <ul class="project-list">
+    {{#each posts}}
+    <li>
+      <h4>{{title}}</h4>
+      <p>{{date}}</p>
+      <p>{{content}}</p>
+      {{!-- <a href="/post/edit/{{id}}">Edit</a>
+      <a href="/post/delete/{{id}}">Delete</a> --}}
+      {{!-- <button class="postDelete">Delete</button> --}}
+      <button id="delete" class="btn btn-sm btn-danger" data-id="{{id}}">DELETE</button>
+      <button id="edit" class="btn btn-sm btn-danger" data-id="{{id}}">EDIT</button>
+      <button id="save" class="btn btn-sm btn-danger" data-id="{{id}}">SAVE</button>
+    </li>
+    {{/each}}
+  </ul>
+  {{else}}
+  <p>No blog posts found.</p>
+  {{/if}}
+
+  <h3>Create New Blog Post</h3>
+  {{!-- <button id="postDelete">Delete</button> --}}
+  <form class="comment-form">
+    <div>
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" required>
+    </div>
+    <div>
+      <label for="comment">Content:</label>
+      <textarea type="text" id="comment" name="comment" required></textarea>
+    </div>
+    <div>
+      {{!-- <label for="postId">Post ID:</label>
+      <input type="text" id="postId" name="postId" required>
+    </div> --}}
+    <button type="submit">Create Post</button>
+    {{!-- <button id="save">Save</button> --}}
+  </form>
+</main>
+
+
+<script src="/js/post.js"></script>
