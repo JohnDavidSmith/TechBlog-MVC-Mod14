@@ -21,3 +21,5 @@ const addCommentFormHandler = async (event) => {
     }
   };
   document.querySelector('.comment-form').addEventListener('submit', addCommentFormHandler);
+
+  
