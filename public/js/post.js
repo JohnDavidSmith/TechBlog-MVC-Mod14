@@ -43,7 +43,11 @@ const delButtonHandler = async (event) => {
     }
   }
 };
-document.querySelector('#delete').addEventListener('click', delButtonHandler);
+const delButtons = document.querySelectorAll('#delete');
+
+delButtons.forEach(function(delButton) {
+  delButton.addEventListener('click', delButtonHandler);
+});
 
 const editButtonHandler = async (event) => {
 
@@ -67,7 +71,13 @@ const editButtonHandler = async (event) => {
     }
   }
 };
-document.querySelector('#edit').addEventListener('click', editButtonHandler);
+
+const editButtons = document.querySelectorAll('#edit');
+
+editButtons.forEach(function(editButton) {
+  editButton.addEventListener('click', editButtonHandler);
+});
+
  
 const saveButtonHandler = async (event) => {
   event.preventDefault();
@@ -95,5 +105,9 @@ const saveButtonHandler = async (event) => {
   }
 };
 
-document.querySelector('#save').addEventListener('click', saveButtonHandler); 
+const saveButtons = document.querySelectorAll('#save');
+
+saveButtons.forEach(function(saveButton) {
+  saveButton.addEventListener('click', saveButtonHandler);
+});
  

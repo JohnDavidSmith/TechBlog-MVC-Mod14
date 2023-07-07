@@ -1,24 +1,39 @@
-
 {{!-- Main Content --}}
 <main>
   {{#if posts.length}}
-    <ul>
-      {{#each posts}}
-      {{log this}}
-        <li>
-        <a href='/post/{{id}}'>
-  <h2>{{title}}</h2>
-</a>
-        <p><strong>Posted by</strong> {{user.name}} <strong>on</strong> {{format_time createdAt}}</p> 
-        {{!-- <p><strong>On:</strong> {{format_time createdAt}}</p>   --}}
-        </li>
-        <li>
-          <p> {{content}}</p>
-        </li>
-      {{/each}}
-    </ul>
-  {{else}}
-    <p>No blog posts found.</p>
-  {{/if}}
-</main>
+  <ul>
+    {{#each posts}}
+    {{log this}}
+    <li>
+      <a href='/post/{{id}}'>
+        <h2>{{title}}</h2>
+      </a>
+      <p><strong>Posted by</strong> {{user.name}} <strong>on</strong> {{format_time createdAt}}</p>
+      {{!-- <p><strong>On:</strong> {{format_time createdAt}}</p> --}}
+    </li>
+    <li>
+      <p> {{content}}</p>
+    </li>
 
+    {{#each comments}}
+    {{log this}}
+    <li>
+      <a href='/post/{{id}}'>
+        {{!-- <h2>{{title}}</h2> --}}
+      </a>
+      <p><strong>Commented by</strong> {{user.name}} <strong>on</strong> {{format_time createdAt}}</p>
+      {{!-- <p><strong>On:</strong> {{format_time createdAt}}</p> --}}
+    </li>
+    <li>
+      <p> {{content}}</p>
+    </li>
+    {{/each}}
+
+    {{/each}}
+  </ul>
+  {{else}}
+  <p>No blog posts found.</p>
+  {{/if}}
+
+
+</main>
