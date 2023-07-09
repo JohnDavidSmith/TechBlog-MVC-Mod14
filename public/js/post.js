@@ -25,6 +25,7 @@ const creatPostFormHandler = async (event) => {
 };
 document.querySelector('.comment-form').addEventListener('submit', creatPostFormHandler);
 
+
 const delButtonHandler = async (event) => {
 
   console.log("click")
@@ -44,10 +45,10 @@ const delButtonHandler = async (event) => {
   }
 };
 const delButtons = document.querySelectorAll('#delete');
-
 delButtons.forEach(function(delButton) {
   delButton.addEventListener('click', delButtonHandler);
 });
+
 
 const editButtonHandler = async (event) => {
 
@@ -71,14 +72,12 @@ const editButtonHandler = async (event) => {
     }
   }
 };
-
 const editButtons = document.querySelectorAll('#edit');
-
 editButtons.forEach(function(editButton) {
   editButton.addEventListener('click', editButtonHandler);
 });
 
- 
+
 const saveButtonHandler = async (event) => {
   event.preventDefault();
 
@@ -104,9 +103,7 @@ const saveButtonHandler = async (event) => {
     alert('Failed to save post');
   }
 };
-
 const saveButtons = document.querySelectorAll('#save');
-
 saveButtons.forEach(function(saveButton) {
   saveButton.addEventListener('click', saveButtonHandler);
 });

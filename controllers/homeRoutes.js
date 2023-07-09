@@ -12,8 +12,6 @@ router.get('/', async (req, res) => {
       }, { model: Comment, include: [User] }],
     });
 
-
-
     const posts = postData.map((item) => item.get({ plain: true }));
     console.log(posts)
     console.log(posts[0])
