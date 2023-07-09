@@ -20,7 +20,7 @@
 
 * Developers spend plenty of time creating new applications and debugging existing codebases, but most developers also spend at least some of their time reading and writing about technical concepts, recent advancements, and new technologies.
 
-* The user of this App can create, delete, edit and save their own post, plus they can add comments on other users posts and all that will be displayed on the home page of the App.
+* The user of this App can create, delete, edit and save their own post, plus they can add comments on other users posts and all that will be displayed on the home page of the App after they login or sign-up. 
 
 ## Screenshot
 
