@@ -36,7 +36,7 @@
 
 ## Heroku link
 
-* 
+* [The Tech Blog](https://whispering-fjord-25598-722836c96b33.herokuapp.com/)
 
 ## Credits
 * 
